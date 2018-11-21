@@ -9,9 +9,11 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Plugins begin
-Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'             " Syntax-checker. Might get new gh-user?
+Plug 'scrooloose/nerdtree'
 Plug 'drewtempelmeyer/palenight.vim'    " Palenight-theme
 Plug 'itchyny/lightline.vim'            " Lightline statusline/tabline
+
 call plug#end()
 
 " Syntastic settings
