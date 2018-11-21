@@ -37,6 +37,7 @@ let g:lightline = {
   \  }
 
 " Remaps
+map     <Space> <Nop>
 noremap ö :
 noremap ä '
 noremap å ^
