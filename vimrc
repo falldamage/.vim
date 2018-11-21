@@ -15,6 +15,7 @@ Plug 'drewtempelmeyer/palenight.vim'    " Palenight-theme
 Plug 'itchyny/lightline.vim'            " Lightline statusline/tabline
 Plug '/usr/bin/fzf'                     " Installation directory for fzf. Might want to change.
 Plug 'junegunn/fzf.vim'                 " Fzf for vim
+Plug 'airblade/vim-gitgutter'           " Git info on lines
 
 call plug#end()
 
