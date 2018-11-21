@@ -9,8 +9,9 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Plugins begin
-Plug 'scrooloose/syntastic'             " Syntax-checker. Might get new gh-user?
-Plug 'scrooloose/nerdtree'              " Remove?
+Plug 'w0rp/ale'                         " Syntax checker.
+Plug 'scrooloose/nerdtree'              " NERDtree, nice for IDE-mode
+Plug 'scrooloose/nerdcommenter'         " Comment with <leader>cc or <leader>c<space>
 Plug 'drewtempelmeyer/palenight.vim'    " Palenight-theme
 Plug 'itchyny/lightline.vim'            " Lightline statusline/tabline
 Plug '/usr/bin/fzf'                     " Installation directory for fzf. Might want to change.
@@ -19,15 +20,8 @@ Plug 'airblade/vim-gitgutter'           " Git info on lines
 
 call plug#end()
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Ale settings
+let g:ale_sign_column_always = 1
 
 " Statusbar settings
 set laststatus=2
@@ -39,7 +33,6 @@ let g:lightline = {
 " Remaps
 map     <Space> <Nop>
 noremap ö :
-noremap ä '
 noremap å ^
 noremap Å $
 let mapleader = ' '
@@ -48,8 +41,8 @@ noremap <Leader>s :source $MYVIMRC<CR>
 " Removes search highlight
 noremap <Leader>d :nohlsearch<CR>
 " fzf-specific. Might want to add an if-case here.
-noremap <Leader>p :Buffers<CR>
-noremap <Leader>o :Files<CR>
+noremap ä :Buffers<CR>
+noremap <Leader>t :Files<CR>
 
 " Vital settings
 set number
