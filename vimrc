@@ -41,9 +41,14 @@ noremap ö :
 noremap ä '
 noremap å ^
 noremap Å $
+let mapleader = ' '
+" Reload vimrc
+noremap <Leader>s :source $MYVIMRC<CR>
+" Removes search highlight
+noremap <Leader>d :nohlsearch<CR>
 " fzf-specific. Might want to add an if-case here.
-nmap    <C-P> :Buffers<CR>
-nmap    <C-O> :Files<CR>
+noremap <Leader>p :Buffers<CR>
+noremap <Leader>o :Files<CR>
 
 " Vital settings
 set number
