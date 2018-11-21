@@ -10,9 +10,11 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins begin
 Plug 'scrooloose/syntastic'             " Syntax-checker. Might get new gh-user?
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'              " Remove?
 Plug 'drewtempelmeyer/palenight.vim'    " Palenight-theme
 Plug 'itchyny/lightline.vim'            " Lightline statusline/tabline
+Plug '/usr/bin/fzf'                     " Installation directory for fzf. Might want to change.
+Plug 'junegunn/fzf.vim'                 " Fzf for vim
 
 call plug#end()
 
@@ -38,6 +40,9 @@ noremap ö :
 noremap ä '
 noremap å ^
 noremap Å $
+" fzf-specific. Might want to add an if-case here.
+nmap    <C-P> :Buffers<CR>
+nmap    <C-O> :Files<CR>
 
 " Vital settings
 set number
@@ -57,7 +62,9 @@ set smartindent
 set smarttab
 set softtabstop=4
 
-set mouse=a
+set mouse=a                             " Makes mouse work in nvim.
+
+set hidden                              " To be able to work with buffers.
 
 " Theme settings
 set background=dark
